@@ -1,0 +1,20 @@
+enable
+configure terminal
+hostname HQ-FIN-SW01
+no ip domain-lookup
+interface FastEthernet0/1
+ description FIN-PC01
+exit
+interface FastEthernet0/2
+ description FIN-PC02
+exit
+interface GigabitEthernet0/1
+ description UPLINK-TO-HQ-RTR01
+exit
+interface vlan 1
+ ip address 192.168.1.2 255.255.255.0
+ no shutdown
+exit
+ip default-gateway 192.168.1.1
+end
+copy running-config startup-config

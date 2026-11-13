@@ -29,7 +29,7 @@ Configurations: see [`labs/packet-tracer`](../labs/packet-tracer/).
 - A **switch** connects devices inside one LAN using MAC addresses. A **router** connects different networks using IP addresses.
 - The first ping can time out because of **ARP** (finding the MAC address for an IP address).
 - The three-way handshake belongs to TCP. Ping uses ICMP and has no handshake.
-- TTL hints: 128 = Windows-type, 255 = Cisco, 64 = Linux.
+- TTL hints: 128 = Windows, 255 = Cisco, 127 = Amazon Linux 2023, 64 = many other Linux systems (clues only).
 
 ## Packet Tracer vs AWS
 

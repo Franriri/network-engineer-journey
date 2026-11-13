@@ -12,8 +12,11 @@ Built an HQ Finance LAN in Cisco Packet Tracer with CLI configuration. Learned A
 ## 2026-11-10 | GitHub
 Created this repository and uploaded the Module 1 and 2 notes and labs.
 
-## 2026-11-11 | Module 3, Part 1
+## 2026-11-11 | Module 3, Lab 1
 Captured traffic with Wireshark and used display filters (icmp, dns, arp, tcp.flags.syn). Read TTL and DNS answers. Traced the path to 8.8.8.8 (11 hops).
 
+## 2026-11-12 | Module 3, Lab 2
+Built a web server on EC2 and captured the TCP three-way handshake. Compared plain-text HTTP with encrypted SSH. Learned that Amazon Linux 2023 starts TTL at 127 and corrected my earlier TTL assumption. Terminated all resources afterwards.
+
 ## Next
-Module 3, Lab 2: TCP handshake with an EC2 web server.
+Module 4: network automation and Infrastructure as Code.

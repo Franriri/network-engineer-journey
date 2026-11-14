@@ -1,0 +1,11 @@
+enable
+configure terminal
+hostname {{ hostname }}
+no ip domain-lookup
+interface {{ interface }}
+ description {{ description }}
+ ip address {{ ip }} {{ mask }}
+ no shutdown
+exit
+end
+copy running-config startup-config

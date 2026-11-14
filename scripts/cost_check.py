@@ -1,4 +1,6 @@
-"""Cost-safety checker: READ-ONLY. It only uses describe calls."""
+"""Cost-safety checker: READ-ONLY. It only uses describe calls.
+Written with AI assistance (Claude); run and verified by Fran in AWS CloudShell.
+"""
 import os
 import boto3
 

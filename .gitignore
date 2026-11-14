@@ -1,0 +1,18 @@
+# NEVER commit secrets or private keys
+*.pem
+*.ppk
+*.key
+.env
+credentials
+*.tfstate
+*.tfstate.*
+.terraform/
+.terraform.lock.hcl
+tf-env.sh
+# Packet captures
+*.pcap
+*.pcapng
+# OS / editor files
+.DS_Store
+Thumbs.db
+.vscode/

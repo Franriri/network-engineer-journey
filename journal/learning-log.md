@@ -24,5 +24,8 @@ Used the AWS CLI in CloudShell (read-only). Ran a Python cost-safety checker wri
 ## 2026-11-14 | Module 4, Lab 4
 Generated router configurations from one Jinja2 template and tested the BR1 config in Packet Tracer (interface up, ping 4 of 4).
 
+## 2026-11-15 | Module 4, Lab 5
+Ran a Netmiko script against a Linux EC2 server over SSH (Python 3.13, because Netmiko failed to install on Python 3.15). Ran an Ansible playbook in CloudShell: changed=2 on the first run and changed=0 on the second. Installed Ansible in /tmp because the CloudShell home folder was 98% full.
+
 ## Next
-Module 4, Lab 5: Netmiko and an Ansible introduction.
+Module 5: monitoring and management (CloudWatch first).

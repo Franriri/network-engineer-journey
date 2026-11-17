@@ -1,9 +1,11 @@
-# Network configuration templates (Python and Jinja2)
+# Network automation with Python
+
+## Part 1: configuration templates (Python and Jinja2)
 
 One template (`router.j2`) plus a list of sites (in `generate_configs.py`) produces one router configuration per site.
 Think of a form letter: write the letter once, keep a list of names, and print one letter per name.
 
-## Run in AWS CloudShell
+Run in AWS CloudShell:
 
 ```
 pip3 install --user jinja2     # only if jinja2 is missing
@@ -11,16 +13,22 @@ python3 generate_configs.py
 cat br1-rtr01.txt
 ```
 
-## Test in Cisco Packet Tracer
-
-1. Add a router, a switch and a PC. Router Gi0/0/0 to switch Gi0/1, PC to switch Fa0/1.
-2. Paste the generated `br1-rtr01.txt` into the router CLI (in small blocks).
-3. PC: 192.168.2.10/24, gateway 192.168.2.1. Then `ping 192.168.2.1`.
-
+Test in Cisco Packet Tracer: paste `br1-rtr01.txt` into a new router, set a PC to 192.168.2.10/24 with gateway 192.168.2.1, then ping 192.168.2.1.
 Result: `show ip interface brief` showed Gi0/0/0 = 192.168.2.1 up/up, and the ping got 4 of 4 replies.
 
-## Why data and template are separate
+Why data and template are separate: add a site by changing only the data, change the standard once in the template, and later feed the data from a spreadsheet or inventory.
 
-- Add a site by changing only the data. The template stays the same.
-- Change the standard once in the template, and every site follows.
-- Later the data can come from a spreadsheet or an inventory file.
+## Part 2: Netmiko (SSH to a Linux server)
+
+`netmiko_check.py` connects to a Linux EC2 server over SSH, runs five read-only commands and saves `report.txt`.
+For a Cisco router, change `device_type` to `cisco_ios`.
+
+Run on Windows (Python 3.13 was used, because the newest Python was not yet supported by all dependencies):
+
+```
+python -m pip install netmiko
+py -V:3.13 netmiko_check.py
+```
+
+The script asks for the server's public IP and the key path, so no secrets are stored in the file.
+Never upload `report.txt` or any `.pem` key.

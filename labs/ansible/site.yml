@@ -1,0 +1,18 @@
+---
+- name: Create a demo folder and a report file
+  hosts: local
+  gather_facts: false
+  tasks:
+    - name: Make sure the demo folder exists
+      ansible.builtin.file:
+        path: "{{ lookup('env', 'HOME') }}/ansible-demo"
+        state: directory
+        mode: "0755"
+
+    - name: Write a small report file
+      ansible.builtin.copy:
+        dest: "{{ lookup('env', 'HOME') }}/ansible-demo-report.txt"
+        content: |
+          Managed by Ansible
+          Module 4, Lab 5, Part B
+        mode: "0644"

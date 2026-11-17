@@ -11,8 +11,8 @@ Some scripts were written with AI assistance (Claude). I run, test and explain t
 | 1 | Terminal and access tools | PowerShell, OpenSSH, AWS EC2 | Done |
 | 2 | Simulators and emulators (labbing) | AWS VPC, Cisco Packet Tracer | Done |
 | 3 | Traffic analysis and diagnostics | Wireshark, tracert, AWS EC2 | Done |
-| 4 | Network automation and IaC | AWS CLI, Python, Terraform, Jinja2 | In progress (Lab 5 next) |
-| 5 | Monitoring and management | CloudWatch, Zabbix or Grafana, SNMP | Planned |
+| 4 | Network automation and IaC | AWS CLI, Python, Terraform, Jinja2, Netmiko, Ansible | Done |
+| 5 | Monitoring and management | CloudWatch, Zabbix or Grafana, SNMP | Next |
 | 6 | Documentation and utilities | draw.io, Markdown, Git/GitHub, VS Code | Planned |
 
 ## Notes
@@ -32,11 +32,12 @@ Some scripts were written with AI assistance (Claude). I run, test and explain t
 - `labs/packet-tracer/` router and switch configurations (fictional company "Fran Corp")
 - `labs/aws/` VPC lab checklist
 - `labs/terraform/` VPC built from code
-- `labs/network-automation/` configuration templates (Python and Jinja2)
+- `labs/network-automation/` configuration templates (Jinja2) and a Netmiko script
+- `labs/ansible/` Ansible inventory and playbook
 
 ## Security rules for this repository
 
 - Never commit `.pem` or `.ppk` keys, passwords, or access keys.
-- Never commit packet captures (`.pcap`, `.pcapng`) or Terraform state (`.tfstate`, `.terraform`).
+- Never commit packet captures (`.pcap`, `.pcapng`), Terraform state (`.tfstate`, `.terraform`) or generated reports (`report.txt`).
 - Do not publish AWS account IDs, public IP addresses, or screenshots that show them.
 - Lab passwords in this repo are fake placeholders.

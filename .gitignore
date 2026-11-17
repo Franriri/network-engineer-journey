@@ -16,3 +16,6 @@ tf-env.sh
 .DS_Store
 Thumbs.db
 .vscode/
+report.txt
+ansible-demo-report.txt
+

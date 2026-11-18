@@ -1,0 +1,8 @@
+! SNMP v2c read-only on HQ-RTR01 (Cisco Packet Tracer lab)
+! "lab-read" is a fake lab string. Never use public or private, and never reuse a real one.
+! Note: "snmp-server location" and "snmp-server contact" gave "Invalid input" in Packet Tracer.
+enable
+configure terminal
+snmp-server community lab-read RO
+end
+copy running-config startup-config

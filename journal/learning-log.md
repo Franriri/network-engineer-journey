@@ -25,7 +25,13 @@ Used the AWS CLI in CloudShell (read-only). Ran a Python cost-safety checker wri
 Generated router configurations from one Jinja2 template and tested the BR1 config in Packet Tracer (interface up, ping 4 of 4).
 
 ## 2026-11-15 | Module 4, Lab 5
-Ran a Netmiko script against a Linux EC2 server over SSH (Python 3.13, because Netmiko failed to install on Python 3.15). Ran an Ansible playbook in CloudShell: changed=2 on the first run and changed=0 on the second. Installed Ansible in /tmp because the CloudShell home folder was 98% full.
+Ran a Netmiko script against a Linux EC2 server over SSH (Python 3.13, because Netmiko failed to install on Python 3.15). Ran an Ansible playbook in CloudShell: changed=2 on the first run and changed=0 on the second.
+
+## 2026-11-17 | Module 5, Lab 1
+Built a CloudWatch CPU alarm with an SNS email topic for an EC2 server. Created a FIFO topic by mistake and replaced it with a Standard topic. Cleaned everything up afterwards.
+
+## 2026-11-18 | Module 5, Labs 2 and 3
+Read CloudWatch metrics of a terminated server with the AWS CLI and a Python script. Freed CloudShell space (an old 761 MB Terraform provider folder). Configured SNMP v2c read-only on a router in Packet Tracer and polled it with the MIB Browser. Learned about SNMP v3 and plain-text community strings. Skipped the Grafana tour to study another time.
 
 ## Next
-Module 5: monitoring and management (CloudWatch first).
+Module 6: documentation and utilities (draw.io, Markdown, Git and GitHub, VS Code).
